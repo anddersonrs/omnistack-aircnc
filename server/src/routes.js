@@ -1,7 +1,9 @@
-import { Router } from 'express';
+const express = require("express");
 
-const routes = new Router();
+const routes = express.Router();
 
-routes.get('/', (req, res) => res.json({ message: 'Welcome to Omni CLI' }));
+routes.get("/", (req, res) => {
+  return res.json({ message: "Hello World" });
+});
 
-export default routes;
+module.exports = routes;
